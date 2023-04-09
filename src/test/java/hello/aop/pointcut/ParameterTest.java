@@ -83,13 +83,12 @@ public class ParameterTest {
         //어노테이션 매칭
         @Before("allMember() && @target(annotation)")
         public void atTarget(JoinPoint joinPoint, ClassAop annotation) {
-            log.info("[@target] {}, obj={}", joinPoint.getSignature(),annotation);        //this랑 this에서 넘어온 오브젝트가 뭐냐.
-
+            log.info("[@target] {}, obj={}", joinPoint.getSignature(),annotation);
         }
 
         @Before("allMember() && @within(annotation)")
         public void atWithin(JoinPoint joinPoint, ClassAop annotation) {
-            log.info("[@within] {}, obj={}", joinPoint.getSignature(),annotation);        //this랑 this에서 넘어온 오브젝트가 뭐냐.
+            log.info("[@within] {}, obj={}", joinPoint.getSignature(),annotation);
 
         }
 
